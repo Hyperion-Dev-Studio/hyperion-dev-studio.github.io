@@ -1,13 +1,143 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href=".src/assets/Hyperion Dev Studio.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hyperion Dev Studio - Mobile App Independant Studio</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hyperion Dev Studio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="#home" class="brand">
+        <img src="assets/hyperion-dev-studio.png" alt="Hyperion Dev Studio" class="brand-logo">
+        <span class="brand-text">Hyperion <span class="muted">Dev Studio</span></span>
+      </a>
+      <nav class="nav-links">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#apps" class="nav-link">Our Apps</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#blog" class="nav-link">Blog</a>
+      </nav>
+      <div class="nav-cta">
+        <a href="#contact" class="btn">Get in touch</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="section">
+    <div class="container">
+      <span class="badge">Building premium mobile experiences</span>
+      <h1 class="h1">Modern apps. <span class="grad-text">Elegant experiences.</span></h1>
+      <p class="lead">Hyperion Dev Studio crafts polished, performant mobile applications for teams who care about detail.</p>
+      <div class="btn-row">
+        <a href="#contact" class="btn btn-lg">Start a project →</a>
+        <a href="#apps" class="btn btn-secondary btn-lg">See our apps</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- APPS -->
+  <section id="apps" class="section">
+    <div class="container grid-2 v-center gap-lg">
+      <div>
+        <span class="badge">Flagship App</span>
+        <h2 class="h2 mt">Logiquiz — logic that plays beautifully</h2>
+        <p class="muted-p">LogiQuiz helps you prepare for your APICS CPIM and CSCP certifications with exam-style quizzes and instant feedback.</p>
+        <ul class="checklist">
+          <li>• CPIM Parts 1 & 2, CSCP Modules 1–3</li>
+          <li>• Instant feedback and explanations</li>
+          <li>• Score tracking and history</li>
+          <li>• Offline mode</li>
+          <li>• Distraction-free interface</li>
+        </ul>
+        <div class="btn-row">
+          <button class="btn" id="betaBtn">Join the Beta</button>
+          <a href="#contact" class="btn btn-secondary">Partner with us</a>
+          <span class="badge badge-secondary">Android • Tablet</span>
+        </div>
+      </div>
+      <div class="center">
+        <img src="assets/logiquiz-screenshot.png" alt="LogiQuiz screenshot" class="app-shot">
+      </div>
+    </div>
+  </section>
+
+  <!-- SECOND APP -->
+  <section class="section">
+    <div class="container grid-2 v-center gap-lg">
+      <div>
+        <span class="badge">Under development</span>
+        <h2 class="h2 mt">Citoyenneté France — Quiz & Test</h2>
+        <p class="muted-p">Prepare for the French citizenship test with clear explanations and thematic quizzes.</p>
+        <ul class="checklist">
+          <li>• Timed practice & review mode</li>
+          <li>• Progress stats and targeted practice</li>
+          <li>• Accessible, clean design</li>
+        </ul>
+        <span class="badge badge-secondary">Android • Tablet</span>
+      </div>
+      <div class="center">
+        <div class="placeholder-shot">Preview coming soon</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section">
+    <div class="container grid-2 gap-lg">
+      <div>
+        <h2 class="h2">Let’s build something exceptional</h2>
+        <p class="muted-p">Tell us about your product, timeline, and budget. We’ll reply within one business day.</p>
+        <div class="contact-list">
+          <div class="contact-item">📧 hyperion.dev.studio@gmail.com</div>
+          <div class="contact-item">💻 github.com/Hyperion-Dev-Studio</div>
+          <div class="contact-item">🔗 linkedin.com/company/hyperion-dev</div>
+        </div>
+      </div>
+      <form class="card form-col" id="contactForm">
+        <input type="text" name="name" placeholder="Your name" class="input" required>
+        <input type="email" name="email" placeholder="Email" class="input" required>
+        <textarea name="message" placeholder="What are you building?" class="textarea" required></textarea>
+        <button type="submit" class="btn">Send inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- BLOG (injected via JS) -->
+  <main id="blogRoot"></main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="brand">
+        <img src="assets/hyperion-dev-studio.png" alt="logo" class="brand-logo">
+        <span class="brand-text">Hyperion Dev Studio</span>
+      </div>
+      <p class="copyright">© 2025 Hyperion Dev Studio. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="#apps">Our Apps</a>
+        <a href="#contact">Contact</a>
+        <a href="#blog">Blog</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div id="betaModal" class="modal-overlay hidden">
+    <div class="modal">
+      <h3 class="modal-title">Join the Beta</h3>
+      <p class="modal-sub">Choose where to join:</p>
+      <div class="modal-actions">
+        <a href="https://groups.google.com/g/hyperion-logiquiz-beta" target="_blank" class="btn btn-lg">Google Groups</a>
+        <a href="https://play.google.com/store/apps/details?id=com.hyperion.logiquiz" target="_blank" class="btn btn-secondary btn-lg">Google Play</a>
+      </div>
+      <button id="closeModal" class="modal-close">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
 </html>
