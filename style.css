@@ -254,44 +254,61 @@ img {
 }
 
 .hero-metrics {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: 12px;
   max-width: 740px;
   margin: 28px 0 0;
+  padding: 0;
 }
 
 .hero-metrics div {
-  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 56px;
+  padding: 10px 14px 10px 10px;
   border: 1px solid rgba(217, 227, 240, 0.9);
-  border-radius: var(--radius);
-  background: rgba(255, 255, 255, 0.68);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.74);
   box-shadow: 0 10px 26px rgba(19, 35, 61, 0.06);
 }
 
 .hero-metrics dt {
+  display: inline-grid;
+  place-items: center;
+  min-width: 38px;
+  height: 38px;
   margin: 0;
-  font-size: 1.05rem;
+  padding-inline: 10px;
+  border-radius: 999px;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--blue), var(--blue-deep));
+  font-size: 0.9rem;
   font-weight: 900;
+  white-space: nowrap;
 }
 
 .hero-metrics dd {
-  margin: 6px 0 0;
-  color: var(--muted);
+  margin: 0;
+  color: var(--ink-soft);
   font-size: 0.92rem;
-  line-height: 1.45;
+  font-weight: 750;
+  line-height: 1.25;
 }
 
-.hero-showcase {
+.hero-showcase,
+.mockup-stack {
   position: relative;
-  min-height: clamp(500px, 54vw, 620px);
+  min-height: clamp(470px, 48vw, 590px);
   display: grid;
   place-items: center;
   isolation: isolate;
-  padding: clamp(24px, 4vw, 46px);
+  padding: clamp(30px, 4vw, 52px);
 }
 
-.hero-showcase::before {
+.hero-showcase::before,
+.mockup-stack::before {
   content: "";
   position: absolute;
   inset: clamp(14px, 3vw, 28px);
@@ -316,11 +333,12 @@ img {
   opacity: 0.9;
 }
 
-.showcase-phone {
+.showcase-phone,
+.hero-phone {
   position: absolute;
-  width: clamp(250px, 19vw, 300px);
-  max-width: 300px;
-  max-height: 580px;
+  width: clamp(240px, 18vw, 280px);
+  max-width: 280px;
+  max-height: 560px;
   border: 10px solid #101827;
   border-radius: 38px;
   background: #101827;
@@ -328,21 +346,23 @@ img {
   overflow: hidden;
 }
 
-.showcase-phone img {
+.showcase-phone img,
+.hero-phone .phone-mockup {
   width: 100%;
-  max-height: 540px;
+  height: auto;
+  max-height: 520px;
   border-radius: 26px;
   object-fit: contain;
 }
 
 .showcase-phone-front {
   z-index: 2;
-  transform: translateX(-74px) rotate(-4deg);
+  transform: translateX(-64px) rotate(-4deg);
 }
 
 .showcase-phone-back {
   z-index: 1;
-  transform: translate(112px, 26px) scale(0.86) rotate(7deg);
+  transform: translate(98px, 24px) scale(0.84) rotate(7deg);
   opacity: 0.94;
 }
 
@@ -528,12 +548,13 @@ img {
   background: linear-gradient(135deg, var(--green), var(--violet));
 }
 
-.screenshot-frame {
+.screenshot-frame,
+.app-card-screenshot {
   align-self: center;
   justify-self: center;
-  width: min(260px, 100%);
-  max-width: 260px;
-  max-height: 560px;
+  width: min(230px, 100%);
+  max-width: 230px;
+  max-height: 500px;
   margin: 0;
   padding: 14px;
   border: 1px solid rgba(217, 227, 240, 0.94);
@@ -543,9 +564,11 @@ img {
   box-shadow: 0 24px 60px rgba(19, 35, 61, 0.16);
 }
 
-.screenshot-frame img {
+.screenshot-frame img,
+.app-card-screenshot .phone-mockup {
   width: 100%;
-  max-height: 520px;
+  height: auto;
+  max-height: 460px;
   border: 9px solid #101827;
   border-radius: 28px;
   object-fit: contain;
@@ -845,27 +868,32 @@ img {
     min-height: auto;
   }
 
-  .hero-showcase {
-    min-height: 470px;
+  .hero-showcase,
+  .mockup-stack {
+    min-height: 430px;
   }
 
-  .showcase-phone {
-    width: clamp(200px, 25vw, 240px);
-    max-width: 240px;
+  .showcase-phone,
+  .hero-phone {
+    width: clamp(170px, 22vw, 200px);
+    max-width: 200px;
     max-height: 420px;
   }
 
-  .showcase-phone img {
-    max-height: 380px;
+  .showcase-phone img,
+  .hero-phone .phone-mockup {
+    max-height: 350px;
   }
 
-  .screenshot-frame {
-    width: min(210px, 100%);
-    max-width: 210px;
+  .screenshot-frame,
+  .app-card-screenshot {
+    width: min(190px, 100%);
+    max-width: 190px;
     max-height: 430px;
   }
 
-  .screenshot-frame img {
+  .screenshot-frame img,
+  .app-card-screenshot .phone-mockup {
     max-height: 390px;
   }
 }
@@ -880,24 +908,34 @@ img {
   }
 
   .hero-metrics {
+    display: grid;
     grid-template-columns: 1fr;
+    gap: 10px;
   }
 
-  .hero-showcase {
-    min-height: 440px;
+  .hero-metrics div {
+    border-radius: var(--radius);
+    justify-content: flex-start;
+  }
+
+  .hero-showcase,
+  .mockup-stack {
+    min-height: 410px;
     padding-block: 26px 72px;
   }
 
-  .showcase-phone {
-    width: min(190px, 78vw);
-    max-width: 78vw;
+  .showcase-phone,
+  .hero-phone {
+    width: min(178px, 75vw);
+    max-width: 75vw;
     max-height: 400px;
     border-width: 8px;
     border-radius: 32px;
   }
 
-  .showcase-phone img {
-    max-height: 382px;
+  .showcase-phone img,
+  .hero-phone .phone-mockup {
+    max-height: 384px;
     border-radius: 22px;
   }
 
@@ -926,14 +964,16 @@ img {
     border-radius: 24px;
   }
 
-  .screenshot-frame {
-    width: min(200px, 78vw);
-    max-width: 78vw;
+  .screenshot-frame,
+  .app-card-screenshot {
+    width: min(180px, 75vw);
+    max-width: 75vw;
     max-height: 420px;
   }
 
-  .screenshot-frame img {
-    max-height: 380px;
+  .screenshot-frame img,
+  .app-card-screenshot .phone-mockup {
+    max-height: 384px;
     border-width: 8px;
     border-radius: 24px;
   }
