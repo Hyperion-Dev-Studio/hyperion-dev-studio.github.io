@@ -40,7 +40,7 @@ const posts = [
       <p>We created <strong>LogiQuiz</strong> to make certification prep feel focused and modern.
       The app offers thematic practice for CPIM Parts 1 & 2 and CSCP Modules 1–3, detailed explanations,
       and an experience that works great offline.</p>
-      <p><a href="#apps" class="btn btn-lg">📲 Try LogiQuiz</a></p>
+      <p><a href="#apps" class="btn btn-lg">Try LogiQuiz</a></p>
     `,
   },
   {
@@ -59,7 +59,7 @@ const posts = [
         <li>Module 3: Supply Chain Improvements & Best Practices</li>
       </ul>
       <p>Use official materials + <em>LogiQuiz</em> daily practice to lock knowledge and timing.</p>
-      <p><a href="#apps" class="btn btn-lg">📲 Study with LogiQuiz</a></p>
+      <p><a href="#apps" class="btn btn-lg">Study with LogiQuiz</a></p>
     `,
   },
   // … add more posts here as you like …

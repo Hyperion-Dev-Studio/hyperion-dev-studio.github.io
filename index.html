@@ -3,142 +3,278 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hyperion Dev Studio</title>
+  <meta
+    name="description"
+    content="Hyperion Dev Studio is an independent app studio building focused mobile quiz apps for certifications, interviews, and career growth."
+  />
+  <title>Hyperion Dev Studio | Focused Quiz Apps</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="assets/favicon.svg" />
 </head>
 <body>
-  <!-- NAVBAR -->
   <header class="nav">
     <div class="container nav-inner">
-      <a href="#home" class="brand">
-        <img src="assets/hyperion-dev-studio.png" alt="Hyperion Dev Studio" class="brand-logo" />
-        <span class="brand-text">Hyperion <span class="muted">Dev Studio</span></span>
+      <a href="#home" class="brand" aria-label="Hyperion Dev Studio home">
+        <img src="assets/Hyperion Dev Studio.png" alt="" class="brand-logo" />
+        <span class="brand-text">Hyperion <span>Dev Studio</span></span>
       </a>
-      <nav class="nav-links">
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#apps" class="nav-link">Our Apps</a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#studio" class="nav-link">Studio</a>
+        <a href="#apps" class="nav-link">Apps</a>
+        <a href="#why" class="nav-link">Why our apps</a>
         <a href="#contact" class="nav-link">Contact</a>
         <a href="#/blog" class="nav-link">Blog</a>
       </nav>
-      <div class="nav-cta">
-        <a href="#contact" class="btn btn-sm">Get in touch</a>
-      </div>
+      <a href="#apps" class="btn btn-sm nav-cta">Explore apps</a>
     </div>
   </header>
 
-  <!-- HERO -->
-  <section id="home" class="section hero">
-    <div class="container">
-      <span class="badge">Building premium mobile experiences</span>
-      <h1 class="display">Modern apps. <span class="grad-text">Elegant experiences.</span></h1>
-      <p class="lead">Hyperion Dev Studio crafts polished, performant mobile applications for teams who care about detail.</p>
-      <div class="btn-row">
-        <a href="#contact" class="btn btn-lg">Start a project →</a>
-        <a href="#apps" class="btn btn-secondary btn-lg">See our apps</a>
-      </div>
-    </div>
-  </section>
+  <main>
+    <section id="home" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Independent quiz app studio</p>
+          <h1>Focused quiz apps for real-world goals.</h1>
+          <p class="lead">
+            Hyperion Dev Studio is an independent app studio building simple, focused mobile learning
+            products for people preparing for certifications, interviews, and career growth.
+          </p>
+          <div class="btn-row">
+            <a href="#apps" class="btn btn-lg">Explore our apps</a>
+            <a href="#contact" class="btn btn-secondary btn-lg">Share an idea</a>
+          </div>
+          <dl class="hero-metrics" aria-label="Studio focus areas">
+            <div>
+              <dt>2</dt>
+              <dd>Focused quiz products</dd>
+            </div>
+            <div>
+              <dt>Mobile-first</dt>
+              <dd>Practice built for short study sessions</dd>
+            </div>
+            <div>
+              <dt>Niche</dt>
+              <dd>Learning flows for specific goals</dd>
+            </div>
+          </dl>
+        </div>
 
-  <!-- APPS -->
-  <section id="apps" class="section">
-    <div class="container grid-2 v-center gap-lg">
-      <div class="stack-gap">
-        <span class="badge">Flagship App</span>
-        <h2 class="h2">LogiQuiz — exam-style prep for APICS CPIM & CSCP</h2>
-        <p class="muted-p">
-          LogiQuiz helps you prepare for your APICS CPIM and CSCP certifications with stimulating, exam-style quizzes.
-          Designed for supply chain professionals and students, LogiQuiz streamlines your learning through thematic exercises and instant feedback.
+        <div class="hero-showcase" aria-label="Quiz app preview">
+          <div class="showcase-phone showcase-phone-front">
+            <img
+              src="public/images/logiquiz-screenshot-1.png"
+              alt="Placeholder LogiQuiz mobile quiz screen for APICS certification practice"
+            />
+          </div>
+          <div class="showcase-phone showcase-phone-back">
+            <img
+              src="public/images/objectif-francais-screenshot-1.png"
+              alt="Placeholder Objectif Français mobile quiz screen for French citizenship preparation"
+            />
+          </div>
+          <div class="showcase-note">
+            <strong>Practice, review, repeat.</strong>
+            <span>Clear questions, useful feedback, steady progress.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="studio" class="section section-tight">
+      <div class="container studio-panel">
+        <div>
+          <p class="eyebrow">The studio</p>
+          <h2>Independent, focused, and product-minded.</h2>
+        </div>
+        <p>
+          We create niche learning apps designed around one clear promise: help users practice regularly,
+          understand what matters, and feel ready when it counts.
         </p>
-        <ul class="checklist">
-          <li>CPIM Parts 1 & 2, CSCP Modules 1–3</li>
-          <li>Instant feedback and detailed explanations</li>
-          <li>Score tracking and quiz history</li>
-          <li>Offline mode</li>
-          <li>Distraction-free interface</li>
-        </ul>
-        <div class="btn-row">
-          <button class="btn" id="betaBtn">Join the Beta</button>
-          <a href="#contact" class="btn btn-secondary">Partner with us</a>
-          <span class="badge badge-secondary">Android • Tablet</span>
+      </div>
+    </section>
+
+    <section id="apps" class="section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Featured apps</p>
+          <h2>Two quiz apps, two specific preparation goals.</h2>
+          <p>
+            Each product is shaped around a focused audience, a concrete outcome, and a clean mobile study rhythm.
+          </p>
+        </div>
+
+        <div class="apps-grid">
+          <article class="app-card app-card-blue">
+            <div class="app-copy">
+              <span class="status-pill">APICS certification prep</span>
+              <h3>LogiQuiz</h3>
+              <p class="app-tagline">Prepare for APICS certification with focused supply chain quizzes.</p>
+              <p>
+                Built for logistics, planning, operations, and supply chain professionals who want structured
+                practice on the go.
+              </p>
+              <div class="app-detail">
+                <span>Audience</span>
+                <strong>Supply chain, logistics, operations, and planning professionals</strong>
+              </div>
+              <ul class="feature-list" aria-label="LogiQuiz key benefits">
+                <li>Practice supply chain concepts in short sessions</li>
+                <li>Prepare smarter with focused quiz flows</li>
+                <li>Build exam confidence through regular review</li>
+              </ul>
+              <div class="btn-row">
+                <button class="btn" id="betaBtn" type="button">Learn more</button>
+                <a href="#contact" class="btn btn-secondary">View on Play Store</a>
+              </div>
+            </div>
+            <figure class="screenshot-frame">
+              <img
+                src="public/images/logiquiz-screenshot-1.png"
+                alt="Placeholder screenshot for LogiQuiz showing a supply chain quiz question and progress state"
+              />
+              <figcaption>Placeholder screenshot, ready to replace.</figcaption>
+            </figure>
+          </article>
+
+          <article class="app-card app-card-green">
+            <div class="app-copy">
+              <span class="status-pill">Citizenship interview prep</span>
+              <h3>Objectif Français</h3>
+              <p class="app-tagline">Prepare for French citizenship with clear civic knowledge quizzes.</p>
+              <p>
+                Practice French institutions, Republican values, geography, daily life, and interview-style questions.
+              </p>
+              <div class="app-detail">
+                <span>Audience</span>
+                <strong>People preparing for the French citizenship interview</strong>
+              </div>
+              <ul class="feature-list" aria-label="Objectif Français key benefits">
+                <li>Practice civic knowledge with clear explanations</li>
+                <li>Review French institutions and values of the Republic</li>
+                <li>Prepare for interview-style questions with confidence</li>
+              </ul>
+              <div class="btn-row">
+                <a href="#contact" class="btn">Learn more</a>
+                <a href="#contact" class="btn btn-secondary">View on Play Store</a>
+              </div>
+            </div>
+            <figure class="screenshot-frame">
+              <img
+                src="public/images/objectif-francais-screenshot-1.png"
+                alt="Placeholder screenshot for Objectif Français showing a French citizenship quiz question and progress state"
+              />
+              <figcaption>Placeholder screenshot, ready to replace.</figcaption>
+            </figure>
+          </article>
         </div>
       </div>
-      <div class="center">
-        <img src="assets/logiquiz-screenshot.png" alt="LogiQuiz screenshot" class="app-shot" loading="lazy" />
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SECOND APP -->
-  <section class="section">
-    <div class="container grid-2 v-center gap-lg">
-      <div class="stack-gap">
-        <span class="badge">Under development</span>
-        <h2 class="h2">Citoyenneté France — Quiz & Test</h2>
-        <p class="muted-p">Prepare for the French citizenship test with clear explanations and thematic quizzes.</p>
-        <ul class="checklist">
-          <li>Timed practice & review mode</li>
-          <li>Progress stats and targeted practice</li>
-          <li>Accessible, clean design</li>
-        </ul>
-        <span class="badge badge-secondary">Android • Tablet</span>
-      </div>
-      <div class="center">
-        <div class="placeholder-shot">Preview coming soon</div>
-      </div>
-    </div>
-  </section>
+    <section id="why" class="section why-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Why our apps</p>
+          <h2>Built for focused preparation, not endless content.</h2>
+          <p>
+            Our quiz apps keep learning practical: clear enough to return to daily, specific enough to matter.
+          </p>
+        </div>
 
-  <!-- CONTACT -->
-  <section id="contact" class="section">
-    <div class="container grid-2 gap-lg">
-      <div class="stack-gap">
-        <h2 class="h2">Let’s build something exceptional</h2>
-        <p class="muted-p">Tell us about your product, timeline, and budget. We’ll reply within one business day.</p>
-        <div class="contact-list">
-          <div class="contact-item">📧 hyperion.dev.studio@gmail.com</div>
-          <div class="contact-item">💻 github.com/Hyperion-Dev-Studio</div>
-          <div class="contact-item">🔗 linkedin.com/company/hyperion-dev</div>
+        <div class="value-grid">
+          <article class="value-card">
+            <span class="value-icon">01</span>
+            <h3>Clear explanations</h3>
+            <p>Questions are designed to help users understand the idea behind the answer.</p>
+          </article>
+          <article class="value-card">
+            <span class="value-icon">02</span>
+            <h3>Focused practice</h3>
+            <p>Each app concentrates on a specific preparation path, without unnecessary noise.</p>
+          </article>
+          <article class="value-card">
+            <span class="value-icon">03</span>
+            <h3>Progress tracking</h3>
+            <p>Study sessions should make progress visible and help users return with purpose.</p>
+          </article>
+          <article class="value-card">
+            <span class="value-icon">04</span>
+            <h3>Mobile-first learning</h3>
+            <p>Practice fits into commutes, breaks, and short moments of attention.</p>
+          </article>
+          <article class="value-card value-card-wide">
+            <span class="value-icon">05</span>
+            <h3>Specific goals</h3>
+            <p>
+              Products are built around concrete exam and interview outcomes, so every feature supports readiness.
+            </p>
+          </article>
         </div>
       </div>
-      <form class="card form-col" id="contactForm">
-        <input type="text" name="name" placeholder="Your name" class="input" required />
-        <input type="email" name="email" placeholder="Email" class="input" required />
-        <textarea name="message" placeholder="What are you building?" class="textarea" required></textarea>
-        <button type="submit" class="btn">Send inquiry</button>
-      </form>
-    </div>
-  </section>
+    </section>
 
-  <!-- BLOG (rendered by router) -->
-  <main id="blogRoot"></main>
+    <section id="contact" class="section contact-section">
+      <div class="container contact-card">
+        <div>
+          <p class="eyebrow">Partnerships, feedback, and app ideas</p>
+          <h2>Have a focused learning product in mind?</h2>
+          <p>
+            Reach out about partnerships, feedback on our apps, or a niche quiz product idea that deserves a
+            careful mobile experience.
+          </p>
+          <div class="contact-list" aria-label="Contact details">
+            <a href="mailto:hyperion.dev.studio@gmail.com">hyperion.dev.studio@gmail.com</a>
+            <a href="https://github.com/Hyperion-Dev-Studio" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/company/hyperion-dev" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+        <form class="form-col" id="contactForm">
+          <label>
+            <span>Your name</span>
+            <input type="text" name="name" class="input" autocomplete="name" required />
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" name="email" class="input" autocomplete="email" required />
+          </label>
+          <label>
+            <span>What would you like to discuss?</span>
+            <textarea name="message" class="textarea" required></textarea>
+          </label>
+          <button type="submit" class="btn">Send message</button>
+        </form>
+      </div>
+    </section>
 
-  <!-- FOOTER -->
+    <div id="blogRoot" aria-live="polite"></div>
+  </main>
+
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="brand">
-        <img src="assets/hyperion-dev-studio.png" alt="logo" class="brand-logo" />
+      <a href="#home" class="brand">
+        <img src="assets/Hyperion Dev Studio.png" alt="" class="brand-logo" />
         <span class="brand-text">Hyperion Dev Studio</span>
-      </div>
-      <p class="copyright">© 2025 Hyperion Dev Studio. All rights reserved.</p>
+      </a>
+      <p class="copyright">© 2026 Hyperion Dev Studio. All rights reserved.</p>
       <div class="footer-links">
-        <a href="#apps">Our Apps</a>
+        <a href="#studio">Studio</a>
+        <a href="#apps">Apps</a>
         <a href="#contact">Contact</a>
         <a href="#/blog">Blog</a>
       </div>
     </div>
   </footer>
 
-  <!-- BETA MODAL -->
   <div id="betaModal" class="modal-overlay hidden" aria-hidden="true">
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="betaTitle">
-      <h3 class="modal-title" id="betaTitle">Join the Beta</h3>
-      <p class="modal-sub">Choose where to join:</p>
+      <h3 class="modal-title" id="betaTitle">LogiQuiz preview</h3>
+      <p class="modal-sub">
+        Real store and product links can be added here when the app pages are ready.
+      </p>
       <div class="modal-actions">
-        <a href="https://groups.google.com/g/hyperion-logiquiz-beta" target="_blank" class="btn btn-lg" rel="noreferrer">Google Groups</a>
-        <a href="https://play.google.com/store/apps/details?id=com.hyperion.logiquiz" target="_blank" class="btn btn-secondary btn-lg" rel="noreferrer">Google Play</a>
+        <a href="#contact" class="btn btn-lg">Ask about LogiQuiz</a>
+        <a href="https://play.google.com/store/apps/details?id=com.hyperion.logiquiz" target="_blank" class="btn btn-secondary btn-lg" rel="noreferrer">Play Store placeholder</a>
       </div>
-      <button id="closeModal" class="modal-close" aria-label="Close">Close</button>
+      <button id="closeModal" class="modal-close" type="button" aria-label="Close LogiQuiz dialog">Close</button>
     </div>
   </div>
 
